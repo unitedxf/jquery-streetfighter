@@ -2,6 +2,18 @@
 body{
  	background-color: black;
 	}
+.instr{
+font-size: 2.000em;
+font-family: 'Knewave', cursive;
+font-weight: 400;
+float: right;
+width: 55%;
+padding: 10px;
+margin: 100px 0;
+  }
+  p{
+    padding: 35px 0;
+  }
 
 .main{
 	background-color: white;
@@ -18,7 +30,7 @@ body{
     height: 494px;
 }
 
-.ryu-ready, .ryu-still, .ryu-throwing {
+.ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
   width: 659px;
   height: 494px;
 }
@@ -51,7 +63,12 @@ position: relative;
 left: 520px;
 top: 171px;
 z-index: 10;
-display: block;
+display: none;
+}
+
+.ryu-cool{
+background-image: url('../images/ryu-cool.gif');
+display: none;
 }
 
 /** {
