@@ -3,30 +3,30 @@ $(document).ready(function() {
     	$('.ryu-still').hide();
 		$('.ryu-ready').show();
 
-		})		
+		})	
 
-	    .mouseleave( function(){	
+	    .mouseleave(function(){	
 		$('.ryu-ready').hide();	
 		$('.ryu-still').show();
 		
 		})
 
-		.mousedown( function(){
-		// play hadouken sound
-		playHadouken();
-		$('.ryu-ready').hide();	
-		$('.ryu-throwing').show();
-		$('.hadouken').finish().show().animate(
-	  {'left': '1020px'},
-	  500,
-	  function() {
-	    $(this).hide();
-	    $(this).css('left', '520px');
-
-	  }
-	);
-	// show hadouken and animate it to the right of the screen
+			.mousedown(function() {
+		  playHadouken();
+		  $('.ryu-ready').hide();
+		  $('.ryu-throwing').show();
+		  $('.hadouken').finish().show()
+		  .animate(
+		    {'left': '1020px'},
+		    500,
+		    function() {
+		      $(this).hide();
+		      $(this).css('left', '520px');
+		    }
+		  );
 		})
+	// show hadouken and animate it to the right of the screen
+		
 
 		.mouseup( function(){
 	
@@ -37,17 +37,24 @@ $(document).ready(function() {
 
 		    // show tyu cool pose
       
-        $("body").keydown(function(){
+        $("body").keydown(function(e){
+        	if	(e.keyCode == 88){
+       	$('.ryu-all').hide();		
  		$('.ryu-cool').show();
- 		$('.ryu-ready').hide();	
+}
+ 	
 
       })
 
-        .keyup(function(){
+       .keyup(function(){
         $('.ryu-cool').hide();
- 		$('.ryu-ready').show();		
+ 		$('.ryu-ready').show();	
+ 	
 
-        })
+	})
+
+     
+
       
    });
 
